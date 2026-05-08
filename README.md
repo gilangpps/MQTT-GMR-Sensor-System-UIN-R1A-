@@ -477,18 +477,12 @@ MQTT-GMR-1A/
 
 ---
 
-## License
-
-This project is developed by the MORA (Magnetoresistance on Air) research group at Universitas Indonesia (UIN) and is provided as-is for research and educational purposes.
-
----
-
 ## Contact & Support
 
 For technical inquiries or contributions, please contact the project maintainers:
 
-**Institution**: Universitas Indonesia
-**Department**: [MORA Research Group]
+**Institution**: Universitas Islam Negeri Sunan Gunung Djati Bandung
+**Department**: [Jurusan Fisika, Fakultas Sains dan Teknologi, UIN Sunan Gunung Djati Bandung]
 **Last Updated**: May 8, 2026
 
 ---
@@ -500,10 +494,10 @@ If you utilize this system in your research, please cite as follows:
 ```bibtex
 @software{gmr_mqtt_2026,
   title   = {MQTT-based Giant Magnetoresistance Sensor System (GMR-UIN-R1A)},
-  author  = {MORA Research Group},
+  author  = {G8lang Pratama Putra Siswanto},
   year    = {2026},
-  url     = {https://github.com/[repository-url]},
-  organization = {Universitas Indonesia}
+  url     = {https://github.com/gilangpps/MQTT-GMR-Sensor-System-UIN-R1A-.git},
+  organization = {Bex 7386 Mini-Techlab}
 }
 ```
 
