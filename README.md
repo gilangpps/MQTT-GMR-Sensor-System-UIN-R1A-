@@ -313,6 +313,10 @@ python GMR-UIN-R1A-Subscriber.py
 4. **Export Data**: File → Export CSV to save measurements
 5. **View Real-time Plot**: Graph updates automatically during collection
 
+### Publisher GUI Preview
+
+![Publisher GUI](src/publisher-GUI.png)
+
 ### Subscriber GUI Operations
 
 1. **Connection Status**: Green indicator when connected to MQTT broker
@@ -320,6 +324,10 @@ python GMR-UIN-R1A-Subscriber.py
 3. **Data Table**: Shows latest measurements
 4. **Export Function**: Save monitored data as CSV
 5. **Publisher Status**: Displays connected/disconnected status
+
+### Subscriber GUI Preview
+
+![Subscriber GUI](src/subscriber-GUI.png)
 
 ### Light Mode Operation
 
@@ -453,27 +461,39 @@ Where:
 ## Directory Structure
 
 ```
-MQTT-GMR-1A/
+MQTT-GMR-Sensor-System-UIN-R1A-/
 ├── README.md                      # This file
-├── GMR-UIN-R1A-Publisher.py      # Full-featured publisher module
-├── GMR-UIN-R1A-Subscriber.py     # Full-featured subscriber module
+├── requirements.txt               # Python dependencies
 ├── main/
 │   └── main.ino                   # Arduino firmware (ADS1115 interface)
-├── light-mode/
-│   ├── Light-Publisher.py         # Simplified publisher (low resource)
-│   └── Light-Subscriber.py        # Simplified subscriber (low resource)
-└── gmr_env/                       # Python virtual environment (auto-created)
+├── patch1-0-0/
+│   ├── dark-mode/
+│   │   ├── GMR-UIN-R1A-Publisher.py      # Full-featured publisher module
+│   │   └── GMR-UIN-R1A-Subscriber.py     # Full-featured subscriber module
+│   └── light-mode/
+│       ├── Light-Publisher.py            # Simplified publisher (low resource)
+│       └── Light-Subscriber.py           # Simplified subscriber (low resource)
+├── patch1-1/
+│   ├── 1_GMR-UIN-R1A-Publisher.py        # Updated publisher module
+│   └── 1_GMR-UIN-R1A-Subscriber.py       # Updated subscriber module
+└── src/
+    ├── publisher-GUI.png                 # Publisher GUI preview
+    └── subscriber-GUI.png                # Subscriber GUI preview
 ```
 
 ### File Descriptions
 
 | File | Purpose | Platform |
 |------|---------|----------|
-| `GMR-UIN-R1A-Publisher.py` | Serial acquisition, MQTT publishing, GUI | Python (Windows/Linux/macOS) |
-| `GMR-UIN-R1A-Subscriber.py` | MQTT subscription, real-time visualization | Python (Windows/Linux/macOS) |
 | `main/main.ino` | Arduino firmware for ADS1115 sensor reading | Arduino IDE |
-| `light-mode/Light-Publisher.py` | Resource-optimized publisher variant | Python |
-| `light-mode/Light-Subscriber.py` | Resource-optimized subscriber variant | Python |
+| `patch1-0-0/dark-mode/GMR-UIN-R1A-Publisher.py` | Serial acquisition, MQTT publishing, GUI | Python (Windows/Linux/macOS) |
+| `patch1-0-0/dark-mode/GMR-UIN-R1A-Subscriber.py` | MQTT subscription, real-time visualization | Python (Windows/Linux/macOS) |
+| `patch1-0-0/light-mode/Light-Publisher.py` | Resource-optimized publisher variant | Python |
+| `patch1-0-0/light-mode/Light-Subscriber.py` | Resource-optimized subscriber variant | Python |
+| `patch1-1/1_GMR-UIN-R1A-Publisher.py` | Updated publisher module | Python |
+| `patch1-1/1_GMR-UIN-R1A-Subscriber.py` | Updated subscriber module | Python |
+| `src/publisher-GUI.png` | Screenshot of publisher GUI interface | Image |
+| `src/subscriber-GUI.png` | Screenshot of subscriber GUI interface | Image |
 
 ---
 
